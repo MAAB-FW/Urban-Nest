@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar/Navbar"
 function App() {
     return (
         <div className="font-open-sans max-w-[1440px] mx-auto">
-            <div className="md:w-[83%] mx-auto">
+            <div className="w-[83%] mx-auto">
                 <Navbar></Navbar>
                 <Outlet></Outlet>
             </div>

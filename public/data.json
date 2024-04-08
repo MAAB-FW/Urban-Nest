@@ -9,7 +9,7 @@
         "area": 2500,
         "location": "123 Main St, Cityville, USA",
         "facilities": ["living room", "kitchen", "backyard", "garage"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/amenities-condominium-apartment-building_87720-97053.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -22,7 +22,7 @@
         "area": 1200,
         "location": "456 Downtown Ave, Metropolis, USA",
         "facilities": ["swimming pool", "gym", "security", "parking"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/modern-condo-apartment-building_87720-96520.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -35,7 +35,7 @@
         "area": 1800,
         "location": "789 Maple St, Suburbia, USA",
         "facilities": ["backyard", "parking", "fireplace"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/design-business-building-nature-background_87720-29576.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -48,7 +48,7 @@
         "area": 800,
         "location": "101 University Ave, College Town, USA",
         "facilities": ["study area", "laundry room", "security"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/living-home-apartment-building_87720-94741.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -61,7 +61,7 @@
         "area": 1200,
         "location": "321 Elderly Dr, Retirement City, USA",
         "facilities": ["community center", "medical services", "gardens"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/high-city-apartment-building_87720-67282.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -74,7 +74,7 @@
         "area": 1500,
         "location": "777 Ocean Blvd, Paradise Beach, USA",
         "facilities": ["ocean view", "private beach access", "BBQ area"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/luxury-condominium-buildings_87720-70476.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -87,7 +87,7 @@
         "area": 1000,
         "location": "888 Lakeside Dr, Serenity Valley, USA",
         "facilities": ["lake view", "fire pit", "fishing dock"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/design-technology-architecture-background_87720-41740.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -100,7 +100,7 @@
         "area": 3000,
         "location": "555 Sunny Lane, Family Town, USA",
         "facilities": ["swimming pool", "backyard", "game room"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/design-backdrop-architecture-background_87720-43270.jpg?w=826",
         "button_text": "View Property"
     },
     {
@@ -113,7 +113,7 @@
         "area": 1600,
         "location": "999 Loft Ave, Urban City, USA",
         "facilities": ["open floor plan", "exposed brick", "rooftop terrace"],
-        "image": "image_url_here",
+        "image": "https://img.freepik.com/premium-photo/minimalism-modern-architecture-background_87720-47651.jpg?w=826",
         "button_text": "View Property"
     }
 ]
