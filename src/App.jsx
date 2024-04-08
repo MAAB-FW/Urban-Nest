@@ -5,10 +5,11 @@ import Navbar from "./components/Navbar/Navbar"
 
 function App() {
     return (
-        <div className="font-open-sans">
-            <Navbar></Navbar>
-            <h2 className="text-2xl text-center">This is Template Project</h2>
-            <Outlet></Outlet>
+        <div className="font-open-sans max-w-[1440px] mx-auto">
+            <div className="md:w-[83%] mx-auto">
+                <Navbar></Navbar>
+                <Outlet></Outlet>
+            </div>
             <Footer></Footer>
         </div>
     )

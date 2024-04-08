@@ -1,10 +1,57 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => {
+    const navlinks = (
+        <>
+            <li>
+                <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+                <NavLink to="/updateProfile">Update Profile</NavLink>
+            </li>
+        </>
+    )
     return (
-        <div>
-            <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <div className="">
+            <div className="navbar bg-base-100">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            {navlinks}
+                        </ul>
+                    </div>
+                    <Link to="/" className="btn btn-ghost text-xl">
+                        Urban Nest
+                    </Link>
+                </div>
+                <div className="navbar-end">
+                    <div className="hidden lg:flex">
+                        <ul className="menu menu-horizontal px-1">{navlinks}</ul>
+                    </div>
+                    <Link
+                        to="/login"
+                        className="btn text-white"
+                        style={{
+                            background: "linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)",
+                        }}>
+                        Login
+                    </Link>
+                </div>
+            </div>
+            {/* <nav className="bg-white border-gray-200 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link to="/" className=" flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Urban Nest</span>
@@ -90,12 +137,12 @@ const Navbar = () => {
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                         <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                             <li>
-                                <a
-                                    href="#"
+                                <NavLink
+                                    to="/"
                                     className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
                                     aria-current="page">
                                     Home
-                                </a>
+                                </NavLink>
                             </li>
                             <li>
                                 <a
@@ -128,7 +175,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
         </div>
     )
 }
