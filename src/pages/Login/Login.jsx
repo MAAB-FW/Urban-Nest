@@ -1,9 +1,15 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Link } from "react-router-dom"
 
 const Login = () => {
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Login</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <section className="gradient-form h-full">
                 <div className="container h-full p-10">
                     <div className="flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">

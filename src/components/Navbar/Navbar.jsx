@@ -4,17 +4,17 @@ import { Link, NavLink } from "react-router-dom"
 const Navbar = () => {
     const navlinks = (
         <>
-            <li>
+            <li className="mx-2 font-medium">
                 <NavLink to="/">Home</NavLink>
             </li>
-            <li>
+            <li className="mx-2 font-medium">
                 <NavLink to="/updateProfile">Update Profile</NavLink>
             </li>
         </>
     )
     return (
-        <div className="">
-            <div className="navbar bg-base-100">
+        <div className="absolute z-50 top-3 left-0 right-0 w-[83%] mx-auto">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
                             {navlinks}
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost text-xl">
+                    <Link to="/" className="md:text-xl font-bold">
                         Urban Nest
                     </Link>
                 </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
                     </div>
                     <Link
                         to="/login"
-                        className="btn text-white"
+                        className="btn text-white border-0"
                         style={{
                             background: "linear-gradient(to right, #ee7724, #b44593)",
                         }}>

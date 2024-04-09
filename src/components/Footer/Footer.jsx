@@ -16,21 +16,21 @@ const Footer = () => {
                         </div>
                         <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
-                                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact Us</h2>
+                                <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
                                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                     <li className="mb-4">
-                                        <a href="https://Urban Nest.com/" className="hover:underline">
-                                            Urban Nest
+                                        <a href="" className="hover:underline">
+                                            Information
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="https://tailwindcss.com/" className="hover:underline">
-                                            Tailwind CSS
+                                    <li className="mb-4">
+                                        <a href="" className="hover:underline">
+                                            New Letter
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="https://tailwindcss.com/" className="hover:underline">
-                                            Tailwind CSS
+                                    <li className="mb-4">
+                                        <a href="" className="hover:underline">
+                                            Resources
                                         </a>
                                     </li>
                                 </ul>
@@ -41,18 +41,18 @@ const Footer = () => {
                                 </h2>
                                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                     <li className="mb-4">
-                                        <a href="https://github.com/themesberg/Urban Nest" className="hover:underline ">
-                                            Github
+                                        <a href="" className="hover:underline ">
+                                            About Us
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
-                                            Discord
+                                    <li className="mb-4">
+                                        <a href="" className="hover:underline">
+                                            Properties
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
-                                            Discord
+                                    <li className="mb-4">
+                                        <a href="" className="hover:underline">
+                                            Services
                                         </a>
                                     </li>
                                 </ul>
@@ -65,12 +65,12 @@ const Footer = () => {
                                             Privacy Policy
                                         </a>
                                     </li>
-                                    <li>
+                                    <li className="mb-4">
                                         <a href="#" className="hover:underline">
                                             Terms &amp; Conditions
                                         </a>
                                     </li>
-                                    <li>
+                                    <li className="mb-4">
                                         <a href="#" className="hover:underline">
                                             Cookie Policy
                                         </a>
