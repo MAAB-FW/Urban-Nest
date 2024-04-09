@@ -14,7 +14,7 @@ import { Autoplay, Pagination } from "swiper/modules"
 const Banner = () => {
     return (
         <div className="md:h-[539px] relative">
-            <img className="absolute z-20 h-full md:h-auto" src="/svg.png" alt="" />
+            <img className="absolute z-20 h-full md:h-auto " src="/svg.png" alt="" />
             <Swiper
                 spaceBetween={30}
                 loop={true}

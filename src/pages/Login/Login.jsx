@@ -58,7 +58,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <div className="flex items-center justify-between pb-6">
-                                <p className="mb-0 me-2">Do not have an account?</p>
+                                <p className="mb-0 me-2">Don&apos;t have an account?</p>
                                 <Link
                                     to="/register"
                                     type="button"

@@ -10,6 +10,7 @@ import UpdateProfile from "./pages/UpdateProfile/UpdateProfile.jsx"
 import AuthInject from "./layouts/AuthInject/AuthInject.jsx"
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx"
 import ViewDetails from "./pages/ViewDetails/ViewDetails.jsx"
+import SecretRoute from "./layouts/SecretRoute/SecretRoute.jsx"
 
 const router = createBrowserRouter([
     {
@@ -31,11 +32,19 @@ const router = createBrowserRouter([
             },
             {
                 path: "/updateProfile",
-                element: <UpdateProfile></UpdateProfile>,
+                element: (
+                    <SecretRoute>
+                        <UpdateProfile></UpdateProfile>
+                    </SecretRoute>
+                ),
             },
             {
                 path: "/viewDetails/:id",
-                element: <ViewDetails></ViewDetails>
+                element: (
+                    <SecretRoute>
+                        <ViewDetails></ViewDetails>
+                    </SecretRoute>
+                ),
             },
         ],
     },

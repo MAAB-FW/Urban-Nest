@@ -43,10 +43,11 @@ const Navbar = () => {
                     </div>
                     <Link
                         to="/login"
-                        className="btn text-white border-0"
-                        style={{
-                            background: "linear-gradient(to right, #ee7724, #b44593)",
-                        }}>
+                        className="btn text-white border-0 bg-[#06b6d4]"
+                        // style={{
+                        //     background: "linear-gradient(to right, #ee7724, #b44593)",
+                        // }}
+                    >
                         Login
                     </Link>
                 </div>
