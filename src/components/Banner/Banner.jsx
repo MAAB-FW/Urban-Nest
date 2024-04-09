@@ -27,24 +27,24 @@ const Banner = () => {
                 }}
                 modules={[Pagination, Autoplay]}
                 className="mySwiper //rounded-lg">
-                <SwiperSlide className="md:h-[539px] relative">
-                    <img
-                        className="w-full absolute top-0 object-cover md:h-[539px] //rounded-lg mix-blend-overlay"
-                        src="https://img.freepik.com/premium-photo/skyscrapers-against-sky-sunset_1048944-1603813.jpg?w=826"
-                        alt=""
-                    />
-                </SwiperSlide>
-                <SwiperSlide className="md:h-[539px] ">
+                <SwiperSlide className="md:h-[539px]">
                     <img
                         className="w-full object-cover md:h-[539px] //rounded-lg mix-blend-overlay"
-                        src="https://img.freepik.com/premium-photo/urban-architecture-apartment-building_87720-95990.jpg?w=826"
+                        src="https://img.freepik.com/premium-photo/modern-condo-apartment-building_87720-96520.jpg?w=826"
                         alt=""
                     />
                 </SwiperSlide>
                 <SwiperSlide className="md:h-[539px]">
                     <img
                         className="w-full object-cover md:h-[539px] //rounded-lg mix-blend-overlay"
-                        src="https://img.freepik.com/premium-photo/modern-buildings-city-against-sky_1048944-14392000.jpg?w=826"
+                        src="https://img.freepik.com/premium-photo/high-city-apartment-building_87720-67282.jpg?w=826"
+                        alt=""
+                    />
+                </SwiperSlide>
+                <SwiperSlide className="md:h-[539px]">
+                    <img
+                        className="w-full object-cover md:h-[539px] //rounded-lg mix-blend-overlay"
+                        src="https://img.freepik.com/premium-photo/design-business-building-nature-background_87720-29576.jpg?w=826"
                         alt=""
                     />
                 </SwiperSlide>
