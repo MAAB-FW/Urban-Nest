@@ -1,6 +1,8 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const SingleEstateCard = () => {
+    const id = 5
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -11,10 +13,15 @@ const SingleEstateCard = () => {
                     />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 className="card-title">Modern Single-family Home</h2>
+                    <p> Type: Single-family homes</p>
+                    <div>
+                        <p className={`px-4 py-2 rounded-2xl bg-warning w-16 font-semibold `}>sale</p>
+                    </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/viewDetails/${id}`} className="btn btn-info text-white">
+                            View Property
+                        </Link>
                     </div>
                 </div>
             </div>

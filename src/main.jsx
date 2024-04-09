@@ -9,6 +9,7 @@ import Register from "./pages/Register/Register.jsx"
 import UpdateProfile from "./pages/UpdateProfile/UpdateProfile.jsx"
 import AuthInject from "./layouts/AuthInject/AuthInject.jsx"
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx"
+import ViewDetails from "./pages/ViewDetails/ViewDetails.jsx"
 
 const router = createBrowserRouter([
     {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/viewDetails/:id",
-                // element:
+                element: <ViewDetails></ViewDetails>
             },
         ],
     },

@@ -14,7 +14,7 @@ import { Autoplay, Pagination } from "swiper/modules"
 const Banner = () => {
     return (
         <div className="md:h-[539px] relative">
-            <img className="absolute z-20 h-full md:h-auto" src="/public/svg.png" alt="" />
+            <img className="absolute z-20 h-full md:h-auto" src="/svg.png" alt="" />
             <Swiper
                 spaceBetween={30}
                 loop={true}
@@ -34,7 +34,7 @@ const Banner = () => {
                         alt=""
                     />
                 </SwiperSlide>
-                <SwiperSlide className="md:h-[539px]">
+                <SwiperSlide className="md:h-[539px] ">
                     <img
                         className="w-full object-cover md:h-[539px] //rounded-lg mix-blend-overlay"
                         src="https://img.freepik.com/premium-photo/urban-architecture-apartment-building_87720-95990.jpg?w=826"

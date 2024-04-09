@@ -10,7 +10,7 @@ const ErrorPage = () => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Error </title>
-                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+                <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
             <Navbar></Navbar>
             <div className="text-center flex flex-col items-center justify-center font-semibold gap-8 h-screen">

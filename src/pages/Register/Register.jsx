@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 
 const Register = () => {
     return (
-        <div>
+        <div className="py-24">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Register</title>
