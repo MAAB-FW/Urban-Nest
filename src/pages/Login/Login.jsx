@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { Helmet } from "react-helmet"
-import { Link } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { RxGithubLogo } from "react-icons/rx"
 import { useForm } from "react-hook-form"
@@ -9,6 +9,8 @@ import toast from "react-hot-toast"
 
 const Login = () => {
     const { loginUser } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const {
         register,
@@ -24,6 +26,7 @@ const Login = () => {
             .then((r) => {
                 console.log(r.user)
                 toast.success("Successfully Logged in!")
+                navigate(location.state || "/")
             })
             .catch((e) => {
                 console.log(e)

@@ -1,7 +1,22 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
+import { AuthContext } from "../../routes/AuthInject/AuthInject"
+import toast from "react-hot-toast"
 
 const Navbar = () => {
+    const { user, logoutUser } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logoutUser()
+            .then(() => {
+                toast.success("Successfully logged out!")
+            })
+            .catch((e) => {
+                console.log(e)
+                toast.error("An error Occur!")
+            })
+    }
+
     const navlinks = (
         <>
             <li className="mx-2 font-medium">
@@ -41,15 +56,32 @@ const Navbar = () => {
                     <div className="hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
                     </div>
-                    <Link
-                        to="/login"
-                        className="btn text-white border-0 bg-[#06b6d4]"
-                        // style={{
-                        //     background: "linear-gradient(to right, #ee7724, #b44593)",
-                        // }}
-                    >
-                        Login
-                    </Link>
+                    <div>
+                        {user ? (
+                            <div className="flex gap-6">
+                                <button title={user.displayName} className="avatar placeholder">
+                                    <div className="bg-neutral text-neutral-content text-sm rounded-full w-12">
+                                        <span>
+                                            <img src={user.photoURL} alt="img" />
+                                        </span>
+                                    </div>
+                                </button>
+                                <Link onClick={handleSignOut} className="btn text-white border-0 bg-[#06b6d4]">
+                                    logout
+                                </Link>
+                            </div>
+                        ) : (
+                            <Link
+                                to="/login"
+                                className="btn text-white border-0 bg-[#06b6d4]"
+                                // style={{
+                                //     background: "linear-gradient(to right, #ee7724, #b44593)",
+                                // }}
+                            >
+                                Login
+                            </Link>
+                        )}
+                    </div>
                 </div>
             </div>
             {/* <nav className="bg-white border-gray-200 dark:bg-gray-900">

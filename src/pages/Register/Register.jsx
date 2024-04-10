@@ -1,11 +1,13 @@
 import React, { useContext } from "react"
 import { Helmet } from "react-helmet"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../routes/AuthInject/AuthInject"
 import { useForm } from "react-hook-form"
+import toast from "react-hot-toast"
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const {
         register,
@@ -21,9 +23,12 @@ const Register = () => {
         createUser(email, password)
             .then((r) => {
                 console.log(r.user)
+                toast.success("Successfully Registered!")
+                navigate("/")
             })
             .catch((e) => {
                 console.log(e)
+                toast.error("An error occur! Please try again later!")
             })
     }
 
