@@ -4,11 +4,12 @@ import { AuthContext } from "../../routes/AuthInject/AuthInject"
 import toast from "react-hot-toast"
 
 const Navbar = () => {
-    const { user, logoutUser } = useContext(AuthContext)
+    const { user, logoutUser, setUser } = useContext(AuthContext)
 
     const handleSignOut = () => {
         logoutUser()
             .then(() => {
+                setUser(null)
                 toast.success("Successfully logged out!")
             })
             .catch((e) => {
