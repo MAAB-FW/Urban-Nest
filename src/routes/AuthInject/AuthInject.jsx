@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
+    GithubAuthProvider,
     GoogleAuthProvider,
     createUserWithEmailAndPassword,
     onAuthStateChanged,
@@ -13,6 +14,7 @@ import auth from "../../firebase/firebase.config"
 export const AuthContext = createContext()
 
 const googleProvider = new GoogleAuthProvider()
+const githubProvider = new GithubAuthProvider()
 
 const AuthInject = ({ children }) => {
     const [user, setUser] = useState(null)
@@ -35,6 +37,11 @@ const AuthInject = ({ children }) => {
         setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
+    // github login
+    const githubLogin = () => {
+        setLoading(true)
+        return signInWithPopup(auth, githubProvider)
+    }
 
     // logout user
     const logoutUser = () => {
@@ -51,7 +58,7 @@ const AuthInject = ({ children }) => {
         return () => unSubscribe()
     }, [])
 
-    const AuthData = { createUser, loginUser, user, setUser, logoutUser, loading, googleLogin }
+    const AuthData = { createUser, loginUser, user, setUser, logoutUser, loading, googleLogin, githubLogin }
     return <AuthContext.Provider value={AuthData}>{children}</AuthContext.Provider>
 }
 

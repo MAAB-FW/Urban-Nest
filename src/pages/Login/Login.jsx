@@ -8,7 +8,7 @@ import { AuthContext } from "../../routes/AuthInject/AuthInject"
 import toast from "react-hot-toast"
 
 const Login = () => {
-    const { loginUser, googleLogin } = useContext(AuthContext)
+    const { loginUser, googleLogin, githubLogin } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -36,6 +36,18 @@ const Login = () => {
 
     const handleGoogle = () => {
         googleLogin()
+            .then((r) => {
+                console.log(r)
+                toast.success("Successfully Logged in!")
+                navigate(location.state || "/")
+            })
+            .catch((e) => {
+                console.log(e)
+                toast.error("Incorrect email or password!")
+            })
+    }
+    const handleGithub = () => {
+        githubLogin()
             .then((r) => {
                 console.log(r)
                 toast.success("Successfully Logged in!")
@@ -147,7 +159,9 @@ const Login = () => {
                                 <FcGoogle className="text-2xl mr-4" />
                                 <span>Continue With Google</span>
                             </button>
-                            <button className="flex items-center justify-center bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                            <button
+                                onClick={handleGithub}
+                                className="flex items-center justify-center bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                                 <RxGithubLogo className="text-2xl mr-4" />
                                 <span>Continue With Github</span>
                             </button>
