@@ -58,7 +58,7 @@ const Navbar = () => {
                     </div>
                     <div>
                         {user ? (
-                            <div className="flex gap-6 items-center">
+                            <div className="flex gap-3 md:gap-6 items-center">
                                 <button title={user.displayName} className="avatar placeholder">
                                     <div className="bg-neutral text-neutral-content text-sm rounded-full w-10">
                                         <span>

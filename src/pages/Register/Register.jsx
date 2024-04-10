@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext)
+    const { createUser, updateUserDetails } = useContext(AuthContext)
     const navigate = useNavigate()
 
     const {
@@ -16,15 +16,21 @@ const Register = () => {
     } = useForm()
     // console.log(errors)
     const onSubmit = (data) => {
-        // const { name } = data
-        // const { photoUrl } = data
+        const { name } = data
+        const { photoUrl } = data
         const { email } = data
         const { password } = data
         createUser(email, password)
             .then((r) => {
                 console.log(r.user)
-                toast.success("Successfully Registered!")
-                navigate("/")
+                updateUserDetails(name, photoUrl)
+                    .then(() => {
+                        toast.success("Successfully Registered!")
+                        navigate("/")
+                    })
+                    .catch((e) => {
+                        console.log(e)
+                    })
             })
             .catch((e) => {
                 console.log(e)
