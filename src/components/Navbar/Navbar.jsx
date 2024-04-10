@@ -5,7 +5,6 @@ import toast from "react-hot-toast"
 
 const Navbar = () => {
     const { user, logoutUser, setUser } = useContext(AuthContext)
-
     const handleSignOut = () => {
         logoutUser()
             .then(() => {
@@ -59,26 +58,25 @@ const Navbar = () => {
                     </div>
                     <div>
                         {user ? (
-                            <div className="flex gap-6">
+                            <div className="flex gap-6 items-center">
                                 <button title={user.displayName} className="avatar placeholder">
-                                    <div className="bg-neutral text-neutral-content text-sm rounded-full w-12">
+                                    <div className="bg-neutral text-neutral-content text-sm rounded-full w-10">
                                         <span>
                                             <img src={user.photoURL} alt="img" />
                                         </span>
                                     </div>
                                 </button>
-                                <Link onClick={handleSignOut} className="btn text-white border-0 bg-[#06b6d4]">
+                                <Link
+                                    onClick={handleSignOut}
+                                    className="btn text-white border-0"
+                                    style={{
+                                        background: "linear-gradient(to right, #ee7724, #b44593)",
+                                    }}>
                                     logout
                                 </Link>
                             </div>
                         ) : (
-                            <Link
-                                to="/login"
-                                className="btn text-white border-0 bg-[#06b6d4]"
-                                // style={{
-                                //     background: "linear-gradient(to right, #ee7724, #b44593)",
-                                // }}
-                            >
+                            <Link to="/login" className="btn text-white border-0 bg-[#06b6d4]">
                                 Login
                             </Link>
                         )}
