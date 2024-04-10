@@ -1,10 +1,35 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Helmet } from "react-helmet"
 import { Link } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc"
 import { RxGithubLogo } from "react-icons/rx"
+import { useForm } from "react-hook-form"
+import { AuthContext } from "../../routes/AuthInject/AuthInject"
+import toast from "react-hot-toast"
 
 const Login = () => {
+    const { loginUser } = useContext(AuthContext)
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm()
+    // console.log(loginUser)
+    const onSubmit = (data) => {
+        const { email } = data
+        const { password } = data
+        // console.log(email, password)
+        loginUser(email, password)
+            .then((r) => {
+                console.log(r.user)
+                toast.success("Successfully Logged in!")
+            })
+            .catch((e) => {
+                console.log(e)
+                toast.error("Incorrect email or password!")
+            })
+    }
     return (
         <div className="pt-24 w-[83%] mx-auto">
             <Helmet>
@@ -21,9 +46,18 @@ const Login = () => {
                                 <h1 className="text-2xl font-semibold">Login</h1>
                             </div>
                             <div className="divide-y divide-gray-200">
-                                <div className="py-8 text-base leading-6 space-y-4 text-gray-700  md:leading-7">
+                                <form
+                                    onSubmit={handleSubmit(onSubmit)}
+                                    className="py-8 text-base leading-6 space-y-4 text-gray-700  md:leading-7">
                                     <div className="relative">
                                         <input
+                                            {...register("email", {
+                                                required: { value: true, message: "This field is required" },
+                                                pattern: {
+                                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                                    message: "Invalid email address",
+                                                },
+                                            })}
                                             autoComplete="off"
                                             id="email"
                                             name="email"
@@ -36,9 +70,21 @@ const Login = () => {
                                             className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
                                             Email Address
                                         </label>
+                                        <div>
+                                            {errors.email && (
+                                                <span className="text-red-600 text-sm font-semibold">{errors.email.message}</span>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="relative">
                                         <input
+                                            {...register("password", {
+                                                required: { value: true, message: "This field is required" },
+                                                pattern: {
+                                                    value: /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/,
+                                                    message: "Password needs 1 uppercase, 1 lowercase, min. 6 chars.",
+                                                },
+                                            })}
                                             autoComplete="off"
                                             id="password"
                                             name="password"
@@ -51,11 +97,18 @@ const Login = () => {
                                             className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">
                                             Password
                                         </label>
+                                        <div className="w-56">
+                                            {errors.password && (
+                                                <span className="text-red-600 text-sm font-semibold">
+                                                    {errors.password.message}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className="relative">
-                                        <button className="bg-cyan-500 text-white rounded-md px-2 py-1">Submit</button>
+                                        <button className="bg-cyan-500 text-white rounded-md px-2 py-1">Login</button>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                             <div className="flex items-center justify-between pb-6">
                                 <p className="mb-0 me-2">Don&apos;t have an account?</p>
