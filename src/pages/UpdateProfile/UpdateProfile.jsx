@@ -12,6 +12,9 @@ const UpdateProfile = () => {
         handleSubmit,
         // formState: { errors },
     } = useForm()
+    const rf = () => {
+        window.location.reload()
+    }
 
     const onUpdate = (data) => {
         let preName = ""
@@ -26,10 +29,15 @@ const UpdateProfile = () => {
 
         if (name || photoUrl) {
             return updateUserDetails(name || preName, photoUrl || prePhotoUrl)
-                .then(() =>
-                    toast.success("Profile information updated successfully! Please reload the website to see the changes.")
-                )
-                .catch(() => toast.error("An error Occur!"))
+                .then(() => {
+                    toast.success("Profile information updated successfully!")
+                    setTimeout(() => {
+                        rf()
+                    }, 1000)
+                })
+                .catch(() => {
+                    toast.error("An error Occur!")
+                })
         } else {
             return toast.error("Must type proper name or photoUrl then update your info!")
         }
