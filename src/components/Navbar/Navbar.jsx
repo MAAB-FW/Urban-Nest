@@ -48,8 +48,8 @@ const Navbar = () => {
                             {navlinks}
                         </ul>
                     </div>
-                    <Link to="/" className="md:text-xl font-bold">
-                        Urban Nest
+                    <Link to="/" className="md:text-xl font-black">
+                        Urban <span className="text-info">Nest</span>
                     </Link>
                 </div>
                 <div className="navbar-end">
@@ -76,7 +76,7 @@ const Navbar = () => {
                                 </Link>
                             </div>
                         ) : (
-                            <Link to="/login" className="btn text-white border-0 bg-[#06b6d4]">
+                            <Link to="/login" className="btn text-white border-0 bg-info">
                                 Login
                             </Link>
                         )}

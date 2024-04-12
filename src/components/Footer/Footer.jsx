@@ -9,8 +9,8 @@ const Footer = () => {
                     <div className="md:flex md:justify-between">
                         <div className="mb-6 md:mb-0">
                             <Link to="/" className="flex items-center">
-                                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                                    Urban Nest
+                                <span className="self-center text-2xl font-black whitespace-nowrap dark:text-white">
+                                    Urban <span className="text-info">Nest</span>
                                 </span>
                             </Link>
                         </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                             © 2024&#160;
                             <Link to="/" className="hover:underline">
-                                Urban Nest
+                                Urban <span className="text-info">Nest</span>
                             </Link>
                             . All Rights Reserved.
                         </span>
