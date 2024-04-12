@@ -6,14 +6,14 @@ import { TiLocation } from "react-icons/ti"
 import { AiOutlineAreaChart } from "react-icons/ai"
 
 const SingleEstateCard = ({ d }) => {
-    const { id, estate_title, segment_name, description, price, status, area, location, facilities, image } = d
+    const { id, estate_title, segment_name, price, status, area, location, image } = d || {}
     return (
         <div>
             <div className="card h-full bg-base-100 shadow-xl">
                 <figure>
-                    <img src={image} alt="Shoes" />
+                    <img src={image} alt="" />
                 </figure>
-                <div className="px-6 py-6 flex flex-col justify-between flex-grow">
+                <div className="px-6 py-6 flex flex-col justify-between">
                     <h2 className="text-xl font-bold text-nowrap overflow-hidden text-ellipsis">{estate_title}</h2>
                     <div className="flex justify-between items-center">
                         <p className="font-medium">
