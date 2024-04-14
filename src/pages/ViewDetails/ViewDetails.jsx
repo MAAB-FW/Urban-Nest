@@ -8,6 +8,7 @@ import { TiLocation } from "react-icons/ti"
 import { FcOk } from "react-icons/fc"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
+import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner"
 
 const ViewDetails = () => {
     const params = useParams()
@@ -18,8 +19,13 @@ const ViewDetails = () => {
 
     const findEd = data?.find((da) => da.id == params.id)
     // console.log(findEd)
-    const { estate_title, segment_name, description, price, status, area, location, facilities, image } = findEd || {}
-
+    const { estate_title, segment_name, description, price, status, area, location, facilities, image, latitude, longitude } =
+        findEd || {}
+    // console.log(latitude, longitude)
+    if (!latitude && !longitude) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
+    const position = [latitude, longitude]
     return (
         <div className="pt-48 w-[83%] mx-auto">
             <Helmet>
@@ -85,12 +91,12 @@ const ViewDetails = () => {
             </div>
             <div className="mt-8 md:mt-16">
                 <h2 className="text-center font-bold text-2xl mb-8">Location in Map</h2>
-                <MapContainer className="h-72 md:h-96 rounded-lg" center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                <MapContainer className="h-72 md:h-96 rounded-lg" center={position} zoom={13} scrollWheelZoom={false}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position={[51.505, -0.09]}>
+                    <Marker position={position}>
                         <Popup>
                             A pretty CSS3 popup. <br /> Easily customizable.
                         </Popup>
