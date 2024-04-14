@@ -33,7 +33,7 @@ const ViewDetails = () => {
                 <title>Details</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <div>
+            <div data-aos="zoom-in">
                 <div className="h-full bg-base-100 flex flex-col md:flex-row ">
                     <figure className="flex-1">
                         <img className="mx-auto rounded-lg" src={image} alt="Shoes" />
@@ -89,7 +89,7 @@ const ViewDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-8 md:mt-16">
+            <div data-aos="zoom-out" className="mt-8 md:mt-16">
                 <h2 className="text-center font-bold text-2xl mb-8">Location in Map</h2>
                 <MapContainer className="h-72 md:h-96 rounded-lg" center={position} zoom={13} scrollWheelZoom={false}>
                     <TileLayer

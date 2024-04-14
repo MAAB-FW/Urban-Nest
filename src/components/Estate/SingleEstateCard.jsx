@@ -8,7 +8,7 @@ import { AiOutlineAreaChart } from "react-icons/ai"
 const SingleEstateCard = ({ d }) => {
     const { id, estate_title, segment_name, price, status, area, location, image } = d || {}
     return (
-        <div>
+        <div data-aos={id % 2 == 0?"fade-in":"fade-up"}>
             <div className="card h-full bg-base-100 shadow-xl">
                 <figure>
                     <img src={image} alt="" />

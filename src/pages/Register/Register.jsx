@@ -53,7 +53,7 @@ const Register = () => {
                 <title>Register</title>
                 <link rel="canonical" href="http://mysite.com/example" />
             </Helmet>
-            <div className=" py-6 flex flex-col justify-center md:py-12 ">
+            <div data-aos="zoom-in" className=" py-6 flex flex-col justify-center md:py-12 ">
                 <div className="relative py-3 md:max-w-xl mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform -skew-y-4 md:skew-y-0 -rotate-6 rounded-3xl"></div>
                     <div className="relative px-10 py-10 bg-white shadow-lg  rounded-3xl md:p-20">

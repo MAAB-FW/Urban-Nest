@@ -9,7 +9,7 @@ const Estate = () => {
 
     return (
         <div className="w-[83%] mx-auto pt-12 md:pt-40">
-            <div className="text-center ">
+            <div data-aos="fade-up" className="text-center ">
                 {/* <h2>Your Gateway to Exceptional Residential Living</h2> */}
                 <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-6">Properties</h2>
                 <p className="max-w-xl mx-auto text-sm md:text-base text-slate-500 mb-7 md:mb-12">

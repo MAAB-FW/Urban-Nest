@@ -16,7 +16,7 @@ const Banner = () => {
         <div className="md:h-[539px] relative">
             {/* <img className="absolute z-20 h-full md:h-auto " src="/svg.png" alt="" /> */}
             <div className="w-full h-24"> </div>
-            <div className="absolute *:w-2/3 mt-20 md:mt-40 lg:mt-56 md:ml-16 z-50 text-white text-center flex flex-col items-center justify-center">
+            <div data-aos="zoom-out" className="absolute *:w-2/3 mt-20 md:mt-40 lg:mt-56 md:ml-16 z-50 text-white text-center flex flex-col items-center justify-center">
                 <h1 className="text-xl md:text-4xl font-bold ">
                     Discover Your Perfect Urban Nest: Where Comfort Meets City Living
                 </h1>
