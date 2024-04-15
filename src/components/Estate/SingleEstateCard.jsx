@@ -1,14 +1,14 @@
-/* eslint-disable react/prop-types */
 import React from "react"
 import { Link } from "react-router-dom"
 import { MdSell } from "react-icons/md"
 import { TiLocation } from "react-icons/ti"
 import { AiOutlineAreaChart } from "react-icons/ai"
+import PropTypes from "prop-types"
 
 const SingleEstateCard = ({ d }) => {
     const { id, estate_title, segment_name, price, status, area, location, image } = d || {}
     return (
-        <div data-aos={id % 2 == 0?"fade-in":"fade-up"}>
+        <div data-aos={id % 2 == 0 ? "fade-in" : "fade-up"}>
             <div className="card h-full bg-base-100 shadow-xl">
                 <figure>
                     <img src={image} alt="" />
@@ -55,3 +55,7 @@ const SingleEstateCard = ({ d }) => {
 }
 
 export default SingleEstateCard
+
+SingleEstateCard.propTypes = {
+    d: PropTypes.object,
+}

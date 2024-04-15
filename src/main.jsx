@@ -12,6 +12,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx"
 import ViewDetails from "./pages/ViewDetails/ViewDetails.jsx"
 import SecretRoute from "./routes/SecretRoute/SecretRoute.jsx"
 import { Toaster } from "react-hot-toast"
+import Feedback from "./pages/Feedback/Feedback.jsx"
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,14 @@ const router = createBrowserRouter([
                 element: (
                     <SecretRoute>
                         <UpdateProfile></UpdateProfile>
+                    </SecretRoute>
+                ),
+            },
+            {
+                path: "/feedback",
+                element: (
+                    <SecretRoute>
+                        <Feedback></Feedback>
                     </SecretRoute>
                 ),
             },

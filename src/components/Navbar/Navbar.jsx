@@ -23,6 +23,9 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
             </li>
             <li className="mx-2 font-medium">
+                <NavLink to="/feedback">Feedback</NavLink>
+            </li>
+            <li className="mx-2 font-medium">
                 <NavLink to="/updateProfile">Update Profile</NavLink>
             </li>
         </>
