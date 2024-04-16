@@ -9,6 +9,9 @@ import { FcOk } from "react-icons/fc"
 import "leaflet/dist/leaflet.css"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet"
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner"
+import L from "leaflet"
+import icon from "leaflet/dist/images/marker-icon.png"
+import iconShadow from "leaflet/dist/images/marker-shadow.png"
 
 const ViewDetails = () => {
     const params = useParams()
@@ -26,6 +29,14 @@ const ViewDetails = () => {
         return <LoadingSpinner></LoadingSpinner>
     }
     const position = [latitude, longitude]
+    // const icon = L.icon({iconUrl:"/marker-icon.png"})
+
+    let DefaultIcon = L.icon({
+        iconUrl: icon,
+        shadowUrl: iconShadow,
+    })
+
+    L.Marker.prototype.options.icon = DefaultIcon
     return (
         <div className="pt-48 w-[83%] mx-auto">
             <Helmet>
@@ -98,7 +109,7 @@ const ViewDetails = () => {
                     />
                     <Marker position={position}>
                         <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
+                            {location}
                         </Popup>
                     </Marker>
                 </MapContainer>
