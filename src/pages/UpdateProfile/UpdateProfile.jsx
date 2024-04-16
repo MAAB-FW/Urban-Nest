@@ -46,7 +46,7 @@ const UpdateProfile = () => {
     }
 
     return (
-        <div className="pt-24">
+        <div className="py-24">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Update Profile</title>

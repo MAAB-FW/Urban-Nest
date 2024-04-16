@@ -60,7 +60,7 @@ const Login = () => {
     }
 
     return (
-        <div className="pt-24 w-[83%] mx-auto">
+        <div className="py-24 w-[83%] mx-auto">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Login</title>

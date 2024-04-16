@@ -3,10 +3,10 @@ import PropTypes from "prop-types"
 
 const Feedback = () => {
     return (
-        <div data-aos="zoom-out" className="pt-24 mx-auto">
+        <div data-aos="zoom-out" className="mx-auto">
             <section className="relative z-20 overflow-hidden pb-12 pt-20 dark:bg-dark lg:pb-[90px] md:pt-[100px]">
-                <div className="container  max-w-[83%] mx-auto">
-                    <div className="-mx-4 flex flex-wrap">
+                <div className="container py-10 max-w-[83%] mx-auto">
+                    <div className="flex flex-wrap">
                         <div className="w-full px-4">
                             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
                                 {/* <span className="mb-2 block text-lg font-semibold text-primary">FAQ</span> */}
@@ -21,7 +21,7 @@ const Feedback = () => {
                         </div>
                     </div>
 
-                    <div className="-mx-4 flex flex-wrap">
+                    <div className="flex flex-wrap">
                         <div className="w-full px-4 lg:w-1/2">
                             <AccordionItem
                                 header="How do I search for properties on Urban Nest?"

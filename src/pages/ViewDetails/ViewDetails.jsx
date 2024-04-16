@@ -38,7 +38,7 @@ const ViewDetails = () => {
 
     L.Marker.prototype.options.icon = DefaultIcon
     return (
-        <div className="pt-48 w-[83%] mx-auto">
+        <div className="py-40 w-[83%] mx-auto">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Details</title>
