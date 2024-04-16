@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 
 const Feedback = () => {
     return (
-        <div data-aos="zoom-out" className="pt-24 max-w-[83%] mx-auto">
-            <section className="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] md:pt-[100px]">
-                <div className="container mx-auto">
+        <div data-aos="zoom-out" className="pt-24 mx-auto">
+            <section className="relative z-20 overflow-hidden pb-12 pt-20 dark:bg-dark lg:pb-[90px] md:pt-[100px]">
+                <div className="container  max-w-[83%] mx-auto">
                     <div className="-mx-4 flex flex-wrap">
                         <div className="w-full px-4">
                             <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
@@ -106,7 +106,7 @@ const AccordionItem = ({ header, text }) => {
         setActive(!active)
     }
     return (
-        <div className="mb-8 w-full rounded-lg bg-white p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)] dark:bg-dark-2 dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8">
+        <div className="mb-8 w-full rounded-lg p-4 shadow-[0px_20px_95px_0px_rgba(201,203,204,0.30)]  dark:shadow-[0px_20px_95px_0px_rgba(0,0,0,0.30)] sm:p-8 lg:px-6 xl:px-8">
             <button className={`faq-btn flex w-full text-left`} onClick={() => handleToggle()}>
                 <div className="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg bg-primary/5 text-primary dark:bg-white/5">
                     <svg

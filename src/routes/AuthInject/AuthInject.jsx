@@ -20,6 +20,7 @@ const githubProvider = new GithubAuthProvider()
 const AuthInject = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+    const [reload, setReload] = useState(false)
 
     // create user
     const createUser = (email, password) => {
@@ -60,12 +61,24 @@ const AuthInject = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser)
             setLoading(false)
+            setReload(false)
             console.log(currentUser)
         })
         return () => unSubscribe()
-    }, [])
+    }, [reload])
 
-    const AuthData = { createUser, loginUser, user, setUser, logoutUser, loading, googleLogin, githubLogin, updateUserDetails }
+    const AuthData = {
+        createUser,
+        loginUser,
+        user,
+        setUser,
+        logoutUser,
+        loading,
+        googleLogin,
+        githubLogin,
+        updateUserDetails,
+        setReload,
+    }
     return <AuthContext.Provider value={AuthData}>{children}</AuthContext.Provider>
 }
 

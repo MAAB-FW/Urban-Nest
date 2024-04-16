@@ -5,16 +5,16 @@ import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
 
 const UpdateProfile = () => {
-    const { user, updateUserDetails } = useContext(AuthContext)
+    const { user, updateUserDetails, setReload } = useContext(AuthContext)
 
     const {
         register,
         handleSubmit,
         // formState: { errors },
     } = useForm()
-    const rf = () => {
-        window.location.reload()
-    }
+    // const rf = () => {
+    //     window.location.reload()
+    // }
 
     const onUpdate = (data) => {
         let preName = ""
@@ -31,9 +31,11 @@ const UpdateProfile = () => {
             return updateUserDetails(name || preName, photoUrl || prePhotoUrl)
                 .then(() => {
                     toast.success("Profile information updated successfully!")
-                    setTimeout(() => {
-                        rf()
-                    }, 1000)
+                    setReload(true)
+                    // setTimeout(() => {
+                    //     rf()
+
+                    // }, 1000)
                 })
                 .catch(() => {
                     toast.error("An error Occur!")
