@@ -65,13 +65,20 @@ const UpdateProfile = () => {
                                     <form
                                         onSubmit={handleSubmit(onUpdate)}
                                         className="mt-3 text-base leading-6 space-y-4 text-gray-700  md:leading-7">
-                                        <div className="border rounded-2xl py-4">
-                                            <h1 className="text-center underline font-semibold my-3">Current info</h1>
+                                        <div className="border rounded-2xl p-4">
+                                            <h1 className="text-center underline font-semibold mb-3">Current info</h1>
                                             <div className="flex items-center justify-center">
                                                 <img className="size-20 rounded-full" src={user.photoURL} alt="" />
                                             </div>
+                                            <div className="flex flex-col items-start mt-3">
                                             <div className="flex items-center justify-center">
-                                                <span className="text-black font-medium">{user.displayName}</span>
+                                                <p className="">Name:&#160;</p>
+                                                <span className="font-medium text-black">{user.displayName}</span>
+                                            </div>
+                                            <div className="flex items-center justify-center">
+                                                <p className="">Email:&#160;</p>
+                                                <span className="font-medium text-black">{user.email}</span>
+                                            </div>
                                             </div>
                                         </div>
                                         {/* name */}
