@@ -1,97 +1,105 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
 
 const Feedback = () => {
     return (
-        <div data-aos="zoom-out" className="mx-auto">
-            <section className="relative z-20 overflow-hidden pb-12 pt-20 dark:bg-dark lg:pb-[90px] md:pt-[100px]">
-                <div className="container py-10 max-w-[83%] mx-auto">
-                    <div className="flex flex-wrap">
-                        <div className="w-full px-4">
-                            <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
-                                {/* <span className="mb-2 block text-lg font-semibold text-primary">FAQ</span> */}
-                                <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
-                                    Any Questions? Look Here
-                                </h2>
-                                {/* <p className="text-base text-body-color dark:text-dark-6">
+        <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>FAQ </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+            <div data-aos="zoom-out" className="mx-auto">
+                <section className="relative z-20 overflow-hidden pb-12 pt-20 dark:bg-dark lg:pb-[90px] md:pt-[100px]">
+                    <div className="container py-10 max-w-[83%] mx-auto">
+                        <div className="flex flex-wrap">
+                            <div className="w-full px-4">
+                                <div className="mx-auto mb-[60px] max-w-[520px] text-center lg:mb-20">
+                                    {/* <span className="mb-2 block text-lg font-semibold text-primary">FAQ</span> */}
+                                    <h2 className="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px]">
+                                        Any Questions? Look Here
+                                    </h2>
+                                    {/* <p className="text-base text-body-color dark:text-dark-6">
                                     There are many variations of passages of Lorem Ipsum available but the majority have suffered
                                     alteration in some form.
                                 </p> */}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-wrap">
+                            <div className="w-full px-4 lg:w-1/2">
+                                <AccordionItem
+                                    header="How do I search for properties on Urban Nest?"
+                                    text="To search for properties on Urban Nest, simply navigate to the search bar on the homepage. You can enter keywords such as location, property type, price range, and more to filter your search results. Additionally, you can use the advanced search filters to refine your search based on specific criteria."
+                                />
+                                <AccordionItem
+                                    header="Are the listings on Urban Nest up-to-date?"
+                                    text="Yes, we strive to keep our listings as up-to-date as possible. Our team regularly updates the website with new listings and removes properties that have been sold or taken off the market. However, we recommend contacting the listing agent directly for the most current information about a property."
+                                />
+                                <AccordionItem
+                                    header="How can I schedule a property viewing?"
+                                    text="To schedule a property viewing, simply click on the 'Schedule Viewing' button located on the listing page of the property you're interested in. Fill out the required information, and the listing agent will contact you to arrange a convenient time for the viewing."
+                                />
+                                <AccordionItem
+                                    header="Do you offer virtual property tours?"
+                                    text="Yes, we offer virtual property tours for select listings. Look for the 'Virtual Tour' option on the listing page to explore the property virtually. If a virtual tour is not available for a particular property, feel free to contact the listing agent for alternative viewing options."
+                                />
+                                <AccordionItem
+                                    header="How do I get in touch with a real estate agent?"
+                                    text="You can easily get in touch with a real estate agent by filling out the contact form on the listing page of a property you're interested in. Alternatively, you can find the contact information of the listing agent displayed on the property details page. Don't hesitate to reach out with any questions or to schedule a viewing."
+                                />
+                            </div>
+                            <div className="w-full px-4 lg:w-1/2">
+                                <AccordionItem
+                                    header="What should I consider when buying a property?"
+                                    text="When buying a property, it's important to consider factors such as location, budget, property type, amenities, and future resale value. Our experienced real estate agents are here to guide you through the buying process and provide expert advice tailored to your specific needs and preferences."
+                                />
+                                <AccordionItem
+                                    header="Do you offer assistance with mortgage financing?"
+                                    text="While we do not directly offer mortgage financing, we can connect you with trusted mortgage lenders who can help you secure financing for your home purchase. Our goal is to provide you with comprehensive support throughout the homebuying process, including assistance with mortgage financing options."
+                                />
+                                <AccordionItem
+                                    header="Purchasing property: extra fees or costs?"
+                                    text="In addition to the purchase price of the property, there may be additional fees and costs involved in the homebuying process, such as closing costs, property taxes, homeowner association (HOA) fees, and insurance premiums. Our real estate agents can provide you with a detailed breakdown of these costs and answer any questions you may have."
+                                />
+                                <AccordionItem
+                                    header="Can I list my property for sale on Urban Nest?"
+                                    text="Yes, if you're interested in listing your property for sale on Urban Nest, please contact us through our website or reach out to one of our real estate agents directly. We'll be happy to discuss your listing options and provide you with personalized assistance to help you sell your property quickly and efficiently."
+                                />
+                                <AccordionItem
+                                    header="Is my personal information secure on Urban Nest?"
+                                    text="Yes, we take the security and privacy of your personal information seriously. Our website employs industry-standard security measures to protect your data from unauthorized access, use, or disclosure. You can browse and interact with our website with confidence, knowing that your information is safe and secure."
+                                />
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap">
-                        <div className="w-full px-4 lg:w-1/2">
-                            <AccordionItem
-                                header="How do I search for properties on Urban Nest?"
-                                text="To search for properties on Urban Nest, simply navigate to the search bar on the homepage. You can enter keywords such as location, property type, price range, and more to filter your search results. Additionally, you can use the advanced search filters to refine your search based on specific criteria."
+                    <div className="absolute bottom-0 right-0 z-[-1]">
+                        <svg width="1440" height="886" viewBox="0 0 1440 886" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                opacity="0.5"
+                                d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
+                                fill="url(#paint0_linear)"
                             />
-                            <AccordionItem
-                                header="Are the listings on Urban Nest up-to-date?"
-                                text="Yes, we strive to keep our listings as up-to-date as possible. Our team regularly updates the website with new listings and removes properties that have been sold or taken off the market. However, we recommend contacting the listing agent directly for the most current information about a property."
-                            />
-                            <AccordionItem
-                                header="How can I schedule a property viewing?"
-                                text="To schedule a property viewing, simply click on the 'Schedule Viewing' button located on the listing page of the property you're interested in. Fill out the required information, and the listing agent will contact you to arrange a convenient time for the viewing."
-                            />
-                            <AccordionItem
-                                header="Do you offer virtual property tours?"
-                                text="Yes, we offer virtual property tours for select listings. Look for the 'Virtual Tour' option on the listing page to explore the property virtually. If a virtual tour is not available for a particular property, feel free to contact the listing agent for alternative viewing options."
-                            />
-                            <AccordionItem
-                                header="How do I get in touch with a real estate agent?"
-                                text="You can easily get in touch with a real estate agent by filling out the contact form on the listing page of a property you're interested in. Alternatively, you can find the contact information of the listing agent displayed on the property details page. Don't hesitate to reach out with any questions or to schedule a viewing."
-                            />
-                        </div>
-                        <div className="w-full px-4 lg:w-1/2">
-                            <AccordionItem
-                                header="What should I consider when buying a property?"
-                                text="When buying a property, it's important to consider factors such as location, budget, property type, amenities, and future resale value. Our experienced real estate agents are here to guide you through the buying process and provide expert advice tailored to your specific needs and preferences."
-                            />
-                            <AccordionItem
-                                header="Do you offer assistance with mortgage financing?"
-                                text="While we do not directly offer mortgage financing, we can connect you with trusted mortgage lenders who can help you secure financing for your home purchase. Our goal is to provide you with comprehensive support throughout the homebuying process, including assistance with mortgage financing options."
-                            />
-                            <AccordionItem
-                                header="Purchasing property: extra fees or costs?"
-                                text="In addition to the purchase price of the property, there may be additional fees and costs involved in the homebuying process, such as closing costs, property taxes, homeowner association (HOA) fees, and insurance premiums. Our real estate agents can provide you with a detailed breakdown of these costs and answer any questions you may have."
-                            />
-                            <AccordionItem
-                                header="Can I list my property for sale on Urban Nest?"
-                                text="Yes, if you're interested in listing your property for sale on Urban Nest, please contact us through our website or reach out to one of our real estate agents directly. We'll be happy to discuss your listing options and provide you with personalized assistance to help you sell your property quickly and efficiently."
-                            />
-                            <AccordionItem
-                                header="Is my personal information secure on Urban Nest?"
-                                text="Yes, we take the security and privacy of your personal information seriously. Our website employs industry-standard security measures to protect your data from unauthorized access, use, or disclosure. You can browse and interact with our website with confidence, knowing that your information is safe and secure."
-                            />
-                        </div>
+                            <defs>
+                                <linearGradient
+                                    id="paint0_linear"
+                                    x1="1308.65"
+                                    y1="1142.58"
+                                    x2="602.827"
+                                    y2="-418.681"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#3056D3" stopOpacity="0.36" />
+                                    <stop offset="1" stopColor="#F5F2FD" stopOpacity="0" />
+                                    <stop offset="1" stopColor="#F5F2FD" stopOpacity="0.096144" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
                     </div>
-                </div>
-
-                <div className="absolute bottom-0 right-0 z-[-1]">
-                    <svg width="1440" height="886" viewBox="0 0 1440 886" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            opacity="0.5"
-                            d="M193.307 -273.321L1480.87 1014.24L1121.85 1373.26C1121.85 1373.26 731.745 983.231 478.513 729.927C225.976 477.317 -165.714 85.6993 -165.714 85.6993L193.307 -273.321Z"
-                            fill="url(#paint0_linear)"
-                        />
-                        <defs>
-                            <linearGradient
-                                id="paint0_linear"
-                                x1="1308.65"
-                                y1="1142.58"
-                                x2="602.827"
-                                y2="-418.681"
-                                gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#3056D3" stopOpacity="0.36" />
-                                <stop offset="1" stopColor="#F5F2FD" stopOpacity="0" />
-                                <stop offset="1" stopColor="#F5F2FD" stopOpacity="0.096144" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     )
 }
@@ -135,7 +143,7 @@ const AccordionItem = ({ header, text }) => {
     )
 }
 
-AccordionItem.propTypes={
+AccordionItem.propTypes = {
     header: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.string,
 }
